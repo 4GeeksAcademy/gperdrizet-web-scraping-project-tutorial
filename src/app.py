@@ -7,8 +7,8 @@ import pandas as pd
 import helper_functions as helper_funcs
 
 # Target URL
-URL='https://companies-market-cap-copy.vercel.app/earnings.html'
-
+#URL='https://companies-market-cap-copy.vercel.app/earnings.html'
+URL='https://companies-market-cap-copy.vercel.app/index.html'
 
 if __name__ == "__main__":
 
