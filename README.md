@@ -81,9 +81,7 @@ GitHub Codespaces provides a complete VS Code environment in your browser with a
 ├── data/                   # SQLite database and data files
 │   └── spotify.db          # Scraped and processed data
 ├── src/                    # Source code and notebooks
-│   ├── app.py              # (Optional) App or script entry point
 │   ├── explore.ipynb       # Main analysis notebook
-│   ├── solution.ipynb      # Reference solution notebook
 │   └── helper_functions.py # Utility functions for scraping/cleaning
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
