@@ -1,26 +1,27 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Python 3",
+	"name": "Python 3.11",
 	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-	"onCreateCommand": "sudo apt update && sudo apt upgrade -y && pip3 install --upgrade pip && pip3 install --user -r requirements.txt",
+	"onCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install -y sqlite3 && pip3 install --upgrade pip && pip3 install --user -r requirements.txt",
 	"customizations": {
 	  "vscode": {
 		"settings": {
-			"jupyter.kernels.excludePythonEnvironments": ["/usr/bin/python3"]
+			"jupyter.kernels.excludePythonEnvironments": ["/usr/bin/python3"],
+			"remote.autoForwardPorts": false,
+			"remote.restoreForwardedPorts": false
 		},
 		"extensions": [
 		  "-dbaeumer.vscode-eslint",
 		  "ms-python.python",
 		  "ms-toolsai.jupyter",
-		  "streetsidesoftware.code-spell-checker"
+		  "streetsidesoftware.code-spell-checker",
+		  "alexcvzz.vscode-sqlite"
 		]
 	  }
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "",
-	
-	// Use 'postAttachCommand' to run commands every time you start the container.
+	"postCreateCommand": "mkdir -p data",
 	"postAttachCommand": "htop"
 }
