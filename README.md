@@ -1,8 +1,11 @@
 # Spotify Streaming Records Web Scraping & Visualization
 
+[![Codespaces Prebuilds](https://github.com/4GeeksAcademy/gperdrizet-web-scraping-project-tutorial/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/4GeeksAcademy/gperdrizet-web-scraping-project-tutorial/actions/workflows/codespaces/create_codespaces_prebuilds)
+
 A hands-on project focused on web scraping, data cleaning, and exploratory data analysis of Spotify's most-streamed songs. This project demonstrates the end-to-end process of extracting real-world data, transforming it, and visualizing key insights using Python.
 
 ![Project Preview](assets/preview.png)
+
 
 ## Project Overview
 
@@ -14,6 +17,91 @@ Key topics covered include:
 - Data cleaning and transformation with `pandas`
 - Storing and querying data using SQLite
 - Visualizing distributions, trends, and categorical data
+
+For detailed assignment instructions, see [`INSTRUCTIONS.md`](INSTRUCTIONS.md).
+
+
+
+## Getting Started
+
+### Option 1: GitHub Codespaces (Recommended)
+
+1. **Fork the Repository**
+   - Click the "Fork" button on the top right of the GitHub repository page
+   - 4Geeks students: set 4GeeksAcademy as the owner - 4Geeks pays for your codespace usage. All others, set yourself as the owner
+   - Give the fork a descriptive name. 4Geeks students: I recommend including your GitHub username to help in finding the fork if you loose the link
+   - Click "Create fork"
+   - 4Geeks students: bookmark or otherwise save the link to your fork
+
+2. **Create a GitHub Codespace**
+   - On your forked repository, click the "Code" button
+   - Select "Create codespace on main"
+   - If the "Create codespace on main" option is grayed out - go to your codespaces list from the three-bar menu at the upper left and delete an old codespace
+   - Wait for the environment to load (dependencies are pre-installed)
+
+3. **Start Working**
+   - Open `notebooks/assignment.ipynb` in the Jupyter interface
+   - Follow the step-by-step instructions in the notebook
+
+### Option 2: Local Development
+
+1. **Prerequisites**
+   - Git
+   - Python >= 3.10
+
+2. **Fork the repository**
+   - Click the "Fork" button on the top right of the GitHub repository page
+   - Optional: give the fork a new name and/or description
+   - Click "Create fork"
+
+3. **Clone the repository**
+   - From your fork of the repository, click the green "Code" button at the upper right
+   - From the "Local" tab, select HTTPS and copy the link
+   - Run the following commands on your machine, replacing `<LINK>` and `<REPO_NAME>`
+
+   ```bash
+   git clone <LINK>
+   cd <REPO_NAME>
+   ```
+
+4. **Set Up Environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+5. **Launch Jupyter & start the notebook**
+   ```bash
+   jupyter notebook notebooks/assignment.ipynb
+   ```
+
+## Project Structure
+
+```
+├── .devcontainer/          # Codespace/development container configuration
+├── assets/                 # Resources and preview images
+│   └── preview.png         # Project preview image
+│ 
+├── data/                   # SQLite database and data files
+│   └── spotify.db          # Scraped and processed data
+│ 
+├── notebooks/              # Notebooks directory
+│   ├── assignment.ipynb    # Complete the assignment here
+│   ├── solution.ipynb      # Reference solution
+│   └── helper_functions.py # Utility functions for scraping/cleaning
+│ 
+├── .gitignore              # Files/directories not tracked by git
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+```
+
+
+## Sample Data
+
+The project uses real-world data scraped from Wikipedia's "List of Spotify streaming records" page, providing up-to-date and relevant insights into music streaming trends.
+
 
 ## Learning Objectives
 
@@ -27,98 +115,6 @@ Key topics covered include:
 - Analyze trends by year, month, and artist
 - Interpret and communicate data-driven insights
 
-## Getting Started
-
-### Using GitHub Codespaces (Recommended)
-
-Launch this project instantly in a fully configured cloud development environment:
-
-1. Click the green "Code" button on the GitHub repository
-2. Select the "Codespaces" tab
-3. Click "Create codespace on main"
-4. Wait for the environment to initialize (all dependencies will be installed automatically)
-5. Open `src/explore.ipynb` to start the analysis
-
-GitHub Codespaces provides a complete VS Code environment in your browser with all required extensions and packages pre-installed.
-
-### Local Installation
-
-#### Prerequisites
-
-- Python 3.11+
-- Jupyter Notebook or VS Code with Jupyter extension
-
-#### Steps
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/4GeeksAcademy/gperdrizet-web-scraping-project-tutorial.git
-   cd gperdrizet-web-scraping-project-tutorial
-   ```
-
-2. **Create a virtual environment (recommended)**:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Open the project**:
-   ```bash
-   jupyter notebook src/explore.ipynb
-   ```
-   Or open the notebook files in VS Code with the Jupyter extension.
-
-## Project Structure
-
-```
-├── assets/                 # Resources and preview images
-│   └── preview.png         # Project preview image
-├── data/                   # SQLite database and data files
-│   └── spotify.db          # Scraped and processed data
-├── src/                    # Source code and notebooks
-│   ├── explore.ipynb       # Main analysis notebook
-│   └── helper_functions.py # Utility functions for scraping/cleaning
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-```
-
-## Analysis Overview
-
-### Data Extraction
-- Scrape Spotify streaming records from Wikipedia
-- Parse HTML tables and extract relevant columns
-
-### Data Cleaning
-- Remove unnecessary columns and handle missing values
-- Convert data types for analysis
-
-### Data Storage
-- Save cleaned data to a local SQLite database
-
-### Visualization & Insights
-- **Stream Count Distribution**: Explore how streams are distributed among the top 100 songs
-- **Release Date Trends**: Analyze how streaming popularity varies by release year and month
-- **Artist Analysis**: Identify the most frequently appearing artists in the top 100
-
-## Key Concepts Covered
-
-### Web Scraping Best Practices
-- Respectful scraping with custom headers
-- Error handling for robust data extraction
-
-### Data Analysis & Visualization
-- Using pandas for data wrangling
-- Creating clear, informative plots with Matplotlib
-- Interpreting and communicating findings
-
-## Sample Data
-
-The project uses real-world data scraped from Wikipedia's "List of Spotify streaming records" page, providing up-to-date and relevant insights into music streaming trends.
 
 ## Technologies Used
 
@@ -138,13 +134,4 @@ This project is designed for educational purposes. Contributions to improve the 
 2. Create a feature branch
 3. Make your improvements
 4. Submit a pull request
-
-## Educational Value
-
-This project is ideal for:
-- Learners interested in web scraping and real-world data analysis
-- Data science students seeking hands-on experience
-- Anyone wanting to practice data cleaning, storage, and visualization in Python
-
-You'll gain practical skills in extracting, transforming, and visualizing data, with a focus on best practices and clear communication of insights.
 
