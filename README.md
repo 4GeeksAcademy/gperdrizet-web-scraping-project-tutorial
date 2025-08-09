@@ -81,8 +81,7 @@ For detailed assignment instructions, see [`INSTRUCTIONS.md`](INSTRUCTIONS.md).
 
 ```
 ├── .devcontainer/          # Codespace/development container configuration
-├── assets/                 # Resources and preview images
-│   └── preview.png         # Project preview image
+├── assets/                 # Images and other files
 │ 
 ├── data/                   # SQLite database and data files
 │   └── spotify.db          # Scraped and processed data
